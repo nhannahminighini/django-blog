@@ -14,7 +14,8 @@ def index(request):
 
 #DEfine uma function chamada ola
 def ola(request):
-    return HttpResponse('Ola Django')
+    #return HttpResponse('Ola Django')
+    return render(request, 'home.html')
 # Create your views here.
 
 
