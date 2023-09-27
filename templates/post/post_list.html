@@ -12,6 +12,10 @@
       <article>
       <h2>Em: {{ post.pub_date|date:"d / m / Y" }}</h2>
       <p>{{ post.body_text }}</p>
+      {% if post.categoria %}
+        <span>Categoria: {{ post.categoria }}</span>
+      {% endif %}
+
       </article>
     {% endfor %}
   </div>

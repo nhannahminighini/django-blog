@@ -5,3 +5,7 @@
 <p>{{ post.body_text }}</p>
 </article>
 {% endblock %} <!-- fecha o bloco content -->
+{% if post.categoria %}
+  <span>Categoria: {{ post.categoria }}</span>
+{% endif %}
+
