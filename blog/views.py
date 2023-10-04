@@ -78,8 +78,9 @@ class PostCreateView(CreateView):
     model = Post
     template_name = 'post/post_form.html'
     # fields = ('body_text', )
-    success_url = reverse_lazy('posts_list')
+    success_url = reverse_lazy('posts_all')
     form_class = PostModelForm
+    success_message = 'Postagem salva com sucesso.'
 
 
 @csrf_exempt
@@ -117,3 +118,8 @@ class PostListView(ListView):
 
 class SobreTemplateView(TemplateView):
     template_name = 'post/sobre.html'
+
+
+def form_valid(self, request, *args, **kwargs):
+    messages.success(self.request, self.success_message)
+    return super(PostCreateView, self).form_valid(request, *args, **kwargs)
