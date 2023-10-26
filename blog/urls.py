@@ -12,6 +12,7 @@ from blog.views import (
     PostCreateView, create_post,
     PostListView, SobreTemplateView,
     PostUpdateView,
+    PostDeleteView,
 
 )
 
@@ -31,4 +32,6 @@ urlpatterns = [
          name="about_page"
          ),
     path('post/<int:pk>/edit', PostUpdateView.as_view(), name="post_edit"),
+    path('post/<int:pk>/delete', PostDeleteView.as_view(), name="post_delete"),
+
 ]

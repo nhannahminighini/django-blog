@@ -19,6 +19,9 @@
       Editar
       </a>
       </article>
+      <a href="{% url 'post_delete' pk=post.id %}" class="link-secondary">
+      Excluir
+      </a>
     {% endfor %}
   </div>
 </div>
