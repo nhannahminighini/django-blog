@@ -11,6 +11,8 @@ from blog.views import (
     get_all_posts, get_post,
     PostCreateView, create_post,
     PostListView, SobreTemplateView,
+    PostUpdateView,
+
 )
 
 
@@ -28,5 +30,5 @@ urlpatterns = [
          SobreTemplateView.as_view(),
          name="about_page"
          ),
-
+    path('post/<int:pk>/edit', PostUpdateView.as_view(), name="post_edit"),
 ]
