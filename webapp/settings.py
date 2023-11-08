@@ -147,3 +147,11 @@ LOGOUT_REDIRECT_URL = '/admin'
 AUTH_USER_MODEL = 'accounts.CustomUser'
 MEDIA_URL = '/media/'  # Caminho para servir os arquivos de mídia
 MEDIA_ROOT = os.path.join(BASE_DIR, 'files/')  # Armazenamento dos arquivos
+
+# email
+Email_backend = 'django.core.mail.backends.smtp.EmailBackend'
+Email_host = 'smtp.gmail.com'
+Email_port = '587'
+Email_use_tls = True
+Email_host_user = 'hello@wanderson.pro.br'
+Email_host_password = 'pgdthrrdvlkmznxn'
